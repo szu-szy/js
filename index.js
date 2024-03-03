@@ -209,6 +209,14 @@ const [firstItem, secondItem] = getState();
 // to samo co:
 // const [firstItem, secondItem] = stateValue;
 // console.log('////')
-console.log(document);
+const emailInput = document.querySelector('html body div');
+const tabOfElements = document.querySelectorAll('.klasa');
+
+// starsze podejscie
+const oldEmailInputByID = document.getElementById('emailID');
+const oldEmailInputByClass = document.getElementsByClassName('email');
+console.log(emailInput.value);
+console.log(oldEmailInputByID)
+console.log(oldEmailInputByClass)
 
 
