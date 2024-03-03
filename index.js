@@ -109,3 +109,34 @@ console.log(typeof betterBiggerValue(1, 2));
 // switch
 
 // obiekty
+
+// deklaracja obiekty
+const person = {
+  name: "tadek",
+  lastName: "norek",
+  age: 30,
+  isMan: true,
+};
+
+// odczyt danych w starym stylu
+console.log(person.name, person.lastName, person.age, person.isMan);
+
+// odczyt danych w nowym stylu
+// destrukturyzacja obiektów
+// wyciaganie wlasciwosci z obiektu - obieranie owoca ze skóry
+
+// wytlumaczenie destrukturyzacji
+// const name = person.name;
+// const lastName = person.lastName;
+// const age = person.age;
+
+const age = 10;
+
+// const {co wyciagamy} = z_czego_wyciagamy
+// jezeli nie mamy pewnosci przy odczycie wlasciwosci obiektu - mozna dodac parametr domyslny "weight = 0"
+const { name: personName, lastName, age: personAge, weight = 0 } = person;
+// const personName = person.name
+
+console.log(personName, lastName, personAge, weight);
+
+// przypisywanie wartosci
