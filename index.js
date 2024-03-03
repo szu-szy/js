@@ -139,4 +139,69 @@ const { name: personName, lastName, age: personAge, weight = 0 } = person;
 
 console.log(personName, lastName, personAge, weight);
 
+// 1 sposob na odczyt, zmiane i dodanie wlasciwwosci - za pomoca kropki "."
+
+// console.log(person.name);
 // przypisywanie wartosci
+person.name = "Andrzej";
+
+// tworzenie nowej wlasciwosci w obiekcie
+
+person.height = 120;
+
+// chcemy utworzyc wlasciosc person-id
+
+// II sposob na odczyt, zmiane i dodanie wlasciwwosci - za pomoca tablicy
+
+// odczyt
+console.log(person["person-id"]);
+
+// zmiane wartosci
+
+person['age'] = 1125
+
+const input = {
+  name: 'email',
+  value: 'test@gmail.com',
+}
+// dodanie wlasciwosci
+person['person-id'] = 'id person'
+
+// dodanie wartosci input po kluczu (name)
+person[input.name] = input.value;
+console.log(person);
+
+// destrukturyzacja tablicowa => const [el1, el2,, el4] = tablica;
+const bigTab = ['Janek', 'Tolek', 'Anatol'];
+
+const [namePerson1, namePerson2] = bigTab;
+
+// to samo co:
+// const namePerson1 = bigTab[0]
+// const namePerson2 = bigTab[1]
+
+// wybieranie elementu z pominieciem kolejnych za pomoca pustych pól
+const [,,namePerson3] = bigTab;
+
+// to samo co:
+// const namePerson3 = bigTab[2]
+
+console.log(namePerson3)
+
+// zadanie z destrukturyzacja tablicy
+const getState = () => {
+  const value = 1000;
+  const tab = ['123',2,3];
+
+  return [value, tab];
+}
+
+const stateValue = getState();
+console.log('state value',stateValue)
+console.log('///')
+console.log('wartosci state value', stateValue[0], stateValue[1])
+const [firstItem, secondItem] = getState();
+console.log('////')
+console.log(firstItem, secondItem)
+
+
