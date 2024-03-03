@@ -29,6 +29,9 @@ const modifiedItems = items.map((item) => {
 console.log(modifiedItems);
 
 // filter => [] - sluzy do przefiltrowawnia tablicy po warunku
+// tablica.filter(() => warunek)
+const filteredItems = items.filter((item) => item.length > 6);
+console.log("przefiltrowana tablica", filteredItems);
 
 // nic nie zwracaja
 // forEach => undefined
