@@ -174,7 +174,11 @@ console.log(person);
 // destrukturyzacja tablicowa => const [el1, el2,, el4] = tablica;
 const bigTab = ['Janek', 'Tolek', 'Anatol'];
 
-const [namePerson1, namePerson2] = bigTab;
+const getBigTab = () => ['Janek', 'Tolek', 'Anatol'];
+
+const getBigTabValue = getBitTab()
+
+const [namePerson1, namePerson2] = getBigTab(); // const [namePerson1, namePerson2] = bigTab
 
 // to samo co:
 // const namePerson1 = bigTab[0]
@@ -200,7 +204,10 @@ const stateValue = getState();
 console.log('state value',stateValue)
 console.log('///')
 console.log('wartosci state value', stateValue[0], stateValue[1])
+
 const [firstItem, secondItem] = getState();
+// to samo co:
+// const [firstItem, secondItem] = stateValue;
 console.log('////')
 console.log(firstItem, secondItem)
 
