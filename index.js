@@ -83,7 +83,7 @@ const addValue = add(5, 2); // -> add zwraca nam a+b czyli 3 i mozemy to przypis
 // gdy zwracamy obiekt bez slowka "return" musimy owinac nawiasami => ({})
 const someFunction = (a, b) => ({});
 
-console.log("some function", someFunction(3, 4));
+// console.log("some function", someFunction(3, 4));
 
 const secondSomeFunction = function addValues(a, b) {
   return a + b;
@@ -104,7 +104,7 @@ const biggerValue = (a, b) => {
 
 const betterBiggerValue = (a, b) => (a > b ? a : b);
 
-console.log(typeof betterBiggerValue(1, 2));
+// console.log(typeof betterBiggerValue(1, 2));
 
 // switch
 
@@ -119,7 +119,7 @@ const person = {
 };
 
 // odczyt danych w starym stylu
-console.log(person.name, person.lastName, person.age, person.isMan);
+// console.log(person.name, person.lastName, person.age, person.isMan);
 
 // odczyt danych w nowym stylu
 // destrukturyzacja obiektów
@@ -137,7 +137,7 @@ const age = 10;
 const { name: personName, lastName, age: personAge, weight = 0 } = person;
 // const personName = person.name
 
-console.log(personName, lastName, personAge, weight);
+// console.log(personName, lastName, personAge, weight);
 
 // 1 sposob na odczyt, zmiane i dodanie wlasciwwosci - za pomoca kropki "."
 
@@ -154,7 +154,7 @@ person.height = 120;
 // II sposob na odczyt, zmiane i dodanie wlasciwwosci - za pomoca tablicy
 
 // odczyt
-console.log(person["person-id"]);
+// console.log(person["person-id"]);
 
 // zmiane wartosci
 
@@ -169,14 +169,14 @@ person['person-id'] = 'id person'
 
 // dodanie wartosci input po kluczu (name)
 person[input.name] = input.value;
-console.log(person);
+// console.log(person);
 
 // destrukturyzacja tablicowa => const [el1, el2,, el4] = tablica;
 const bigTab = ['Janek', 'Tolek', 'Anatol'];
 
 const getBigTab = () => ['Janek', 'Tolek', 'Anatol'];
 
-const getBigTabValue = getBitTab()
+const getBigTabValue = getBigTab()
 
 const [namePerson1, namePerson2] = getBigTab(); // const [namePerson1, namePerson2] = bigTab
 
@@ -190,7 +190,7 @@ const [,,namePerson3] = bigTab;
 // to samo co:
 // const namePerson3 = bigTab[2]
 
-console.log(namePerson3)
+// console.log(namePerson3)
 
 // zadanie z destrukturyzacja tablicy
 const getState = () => {
@@ -201,14 +201,14 @@ const getState = () => {
 }
 
 const stateValue = getState();
-console.log('state value',stateValue)
-console.log('///')
-console.log('wartosci state value', stateValue[0], stateValue[1])
+// console.log('state value',stateValue)
+// console.log('///')
+// console.log('wartosci state value', stateValue[0], stateValue[1])
 
 const [firstItem, secondItem] = getState();
 // to samo co:
 // const [firstItem, secondItem] = stateValue;
-console.log('////')
-console.log(firstItem, secondItem)
+// console.log('////')
+console.log(document);
 
 
