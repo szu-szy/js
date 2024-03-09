@@ -1,3 +1,5 @@
+// Wykład z dnia 03.03 
+
 const value = 0;
 const object = {};
 const tab = [];
@@ -22,6 +24,12 @@ varValue = 0;
 // zwracaja tablice
 // map => [] - sluzy do modyfikacji elementow w tablicy
 const items = ["grabie", "szczotka", "grzebien", "durszlak"];
+const logItem = (item) => {
+  // console.log(item);
+} 
+logItem("element")
+items.forEach(logItem)
+// 
 // tak nie robimy
 const modifiedItems = items.map((item) => {
   // jezeli item ma wiecej niz 6 znakow to zwroc item-dodatek
@@ -209,14 +217,16 @@ const [firstItem, secondItem] = getState();
 // to samo co:
 // const [firstItem, secondItem] = stateValue;
 // console.log('////')
-const emailInput = document.querySelector('html body div');
-const tabOfElements = document.querySelectorAll('.klasa');
-
 // starsze podejscie
-const oldEmailInputByID = document.getElementById('emailID');
-const oldEmailInputByClass = document.getElementsByClassName('email');
-console.log(emailInput.value);
-console.log(oldEmailInputByID)
-console.log(oldEmailInputByClass)
+// const oldEmailInputByID = document.getElementById('emailID');
+// const oldEmailInputByClass = document.getElementsByClassName('email');
+// console.log(emailInput.value);
+// console.log(oldEmailInputByID)
+// console.log(oldEmailInputByClass)
+let a = {
+  name: 'a'
+};
+let b = a;
+b.name = 'cc'
 
-
+// console.log(`a: ${a.name}, b: ${b.name}`);
