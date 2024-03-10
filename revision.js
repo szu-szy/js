@@ -204,6 +204,6 @@ myForm.addEventListener("submit", (event) => {
   event.preventDefault();
   // II sposób na pobieranie danych
   // const emailInputValue = document.querySelector("#email").value;
-  
+
   console.log(emailInput.value);
 });
