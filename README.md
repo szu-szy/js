@@ -26,3 +26,18 @@ Stwórz listę nieuporządkowaną (element <ul>) z trzema elementami listy (elem
 
 Zadanie: Zmiana atrybutów
 Stwórz obrazek <img> na stronie z pustym atrybutem src. Za pomocą JavaScript, po załadowaniu strony, zmień wartość atrybutu src na adres obrazka, który wybierzesz.
+
+## Zadanie 5 - Stwórz klasę o nazwie Calculator.
+- Klasa Calculator powinna zawierać następujące metody:
+- add(...args): Metoda dodaje podane liczby do wyniku kalkulatora.
+- subtract(...args): Metoda odejmuje podane liczby od wyniku kalkulatora.
+- multiply(...args): Metoda mnoży aktualny wynik przez podane liczby.
+- divide(...args): Metoda dzieli aktualny wynik przez podane liczby.
+- clear(): Metoda czyści wynik kalkulatora.
+- getResult(): Metoda zwraca aktualny wynik kalkulatora.
+oraz pola:
+- wynik
+- wartosc pierwszej kliknietej cyfry (kalkulatory dzialaja tak, ze na poczatku klikamy liczbe i dopiero wybieramy operacje dlatego musimy gdzies przechowac wartosc pierwszej liczby przed wykonaniem operacji)
+
+Następnie na bazie tej klasy i metod tworzymy sobie kalkulator na stronie za pomoca JS lub HTML
+- kazdy przycisk powinien wykonywac jedna z metod obiektu kalkulatora
