@@ -39,6 +39,46 @@ const fetchUsers = async () => {
   }
 };
 
-fetchUsers();
+// fetchUsers();
 
-const catchFunction = (paramError) => console.log(paramError);
+// fetch - PUT przykład
+// endpoint - https://dummyjson.com/users/:id
+
+const updateUser = async (id) => {
+  const userURL = `https://dummyjson.com/users/${id}`;
+
+  const userUpdate = {
+    firstName: "nowe imie",
+  };
+  // opcja alternatywna - moze komus przypasuje (osobiscie nie uzywam)
+  // const fetchOptions = {
+  //   method: "PUT",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(userUpdate),
+  // };
+
+  try {
+    // opcja ktorej uzywam - przekazanie jako II parametru obiektu bezposrednio
+    const response = await fetch(userURL, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userUpdate),
+    });
+
+    if (!response.ok) throw new Error("Cannot update user!");
+
+    // serwer zwraca zaktualizowane dane
+    const updatedUser = await response.json();
+
+    console.log(updatedUser);
+    alert("udało sie", updatedUser);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+updateUser(1);
