@@ -81,4 +81,36 @@ const updateUser = async (id) => {
   }
 };
 
-updateUser(1);
+// updateUser(1);
+
+// fetch - POST przykład
+// endpoint - https://dummyjson.com/users/add
+// body parametr => typu obiekt user
+
+const createUser = async (body) => {
+  try {
+    const response = await fetch("https://dummyjson.com/users/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+
+    if (!response.ok) throw new Error("Cannot create user with those data");
+
+    const createdUser = await response.json();
+
+    alert(`Pomyslnie dodano uzytkownika ${createdUser.firstName}!`);
+    console.log(createdUser);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const newUser = {
+  firstName: "Tadek",
+};
+
+// walidacja czy imie istnieje w obiekcie
+if (newUser.firstName) {
+  createUser(newUser);
+}
