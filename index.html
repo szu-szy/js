@@ -9,32 +9,39 @@
 </head>
 
 <body>
-  <!-- <input type="text" id="first-name" name="first-name">
-  <section id="first-section">
-
-  </section>
-  <button id="button-click">Klik</button>
-  <input type="text" id="input-change" name="input-change">
-  <input type="text" id="last-name" name="last-name"> -->
-  <h2>nasz formularz</h2>
-  <form id="my-form">
-    <input type="text" id="email" required>
-    <button id="my-form-btn">Wyslij</button>
-  </form>
-  <!-- Zadania podsumowujace -->
-  <!-- <form id="user-form">
-    <label for="user-email">
-      Email:
-      <input type="text" id="user-email">
-    </label>
-    <label for="user-password">
-      Hasło:
-      <input type="text" id="user-password">
-    </label>
-    <button type="submit">Wyślij</button>
-  </form>
-  <h2>Nasza lista</h2>
+  <!-- Zadania z dnia 16.03 -->
+  <!-- Zad 1 -->
+  <button id="fetch-users-btn">Pobierz liste użytkowników</button>
   <ul id="user-list"></ul>
+  <!-- Zadanie 4 -->
+  <h2>Pobieranie uzytkownika 1-100</h2>
+  <form id="fetch-user-form">
+    <label for="user-id">
+      ID:
+      <input type="number" id="user-id" min="1" max="100">
+    </label>
+    <button type="submit">Pobierz</button>
+  </form>
+  <h2>Aktualizuj uzytkownika</h2>
+  <form id="update-user-form">
+    <label for="update-user-id">
+      ID: <input id="update-user-id" type="number" min="1" max="100">
+    </label>
+    <label for="user-first-name">
+      Imie: <input type="text" id="user-first-name">
+    </label>
+    <label for="user-last-name">
+      Nazwisko: <input type="text" id="user-last-name">
+    </label>
+    <button type="submit">Edytuj</button>
+  </form>
+  <h2>Nowy user</h2>
+  <form id="new-user-form">
+    <label for="new-user-first-name">
+      Imie: <input type="text" id="new-user-first-name" required>
+    </label>
+    <button type="submit">Utworz</button>
+  </form>
 </body>
 
 </html>

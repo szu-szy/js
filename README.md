@@ -81,14 +81,89 @@ utwórz funkcje która tworzy nowy produkt i wyswietla alert z nowo utworzonym p
 DELETE
 usuń dowolny produkt z zakresu 1-100 i wyswietl usuniety produkt w konsoli
 
-stworz przycisk do pobierania danych napisz funkcje za pomoca metodych fetch do pobierania listy uzytkownikow lista uzytkownikow powinna wyswietlic sie w konsoli po wcisnieciu przycisku aby to sie wykonalo musimy dodac event listener do przycisku na event click
+1. stworz przycisk do pobierania danych napisz funkcje za pomoca metodych fetch do pobierania listy uzytkownikow lista uzytkownikow powinna wyswietlic sie w konsoli po wcisnieciu przycisku aby to sie wykonalo musimy dodac event listener do przycisku na event click
 
-na bazie zadania poprzedniego utworz funkcje ktora na bazie pobranej listy dodaje nam elementy do listy uzytkownikow
+2. na bazie zadania poprzedniego utworz funkcje ktora na bazie pobranej listy dodaje nam elementy do listy uzytkownikow
 
-kazdy z elementów powinien miec przycisk do usuwania aktualnego elementu, element powinien zostac usuniety z widoku oraz wyslac zapytanie o usuniecie uzytkownika po ID
+3. kazdy z elementów powinien miec przycisk do usuwania aktualnego elementu, element powinien zostac usuniety z widoku oraz wyslac zapytanie o usuniecie uzytkownika po ID
 
-stworz formularz z input o typie number do wybrania id uzytkownika z zakresu 1-100 stworz funkcje do pobierania pojedynczego uzytkownika przypisz do formularza utworzona funkcje po wcisnieciu przycisku submit powinno nam wyswietlic uzytkownika w konsoli
+4. stworz formularz z input o typie number do wybrania id uzytkownika z zakresu 1-100 stworz funkcje do pobierania pojedynczego uzytkownika przypisz do formularza utworzona funkcje po wcisnieciu przycisku submit powinno nam wyswietlic uzytkownika w konsoli
 
-stworz formularz ktory bedzie aktualizowal firstName oraz lastName uzytkownika formularz bedzie zawieral 3 inputy (okresla id, imie, nazwisko) oraz przycisk input od id powinien byc sprawdzany (min=1, max=100) napisz funkcje ktora pobiera dane z formularza oraz aktualizuje wybranego uzytkownika przypisz funkcje jako event listener do formularza
+5. stworz formularz ktory bedzie aktualizowal firstName oraz lastName uzytkownika formularz bedzie zawieral 3 inputy (okresla id, imie, nazwisko) oraz przycisk input od id powinien byc sprawdzany (min=1, max=100) napisz funkcje ktora pobiera dane z formularza oraz aktualizuje wybranego uzytkownika przypisz funkcje jako event listener do formularza
 
-stworz formularz do utworzenia nowego uzytkownika stworz funkcje ktora bedzie pobierac pola z formularza i tworzyc na ich bazie nowego uzytkownika w bazie po utworzeniu dajmy alert dla uzytkownika o nowym produkcie pamietamy o sprawdzeniu czy dane nie sa puste dodajemy event listener do formularza z referencja funkcji
+6. stworz formularz do utworzenia nowego uzytkownika stworz funkcje ktora bedzie pobierac pola z formularza i tworzyc na ich bazie nowego uzytkownika w bazie po utworzeniu dajmy alert dla uzytkownika o nowym produkcie pamietamy o sprawdzeniu czy dane nie sa puste dodajemy event listener do formularza z referencja funkcji
+
+7. stworz 3 przyciski "Strona 1", "strona 2", "strona 3"
+stworz 1 funkcje z przyjmowanym parametrem "page", gdzie limit jest ustalony na sztywno do zmiennej ITEM_LIMIT
+przypisz eventy do przyciskow z html
+kazdy z tych przyciskow okresla odpowiednio elementy 1-10, 11-20, 21-30
+po wcisnieciu odpowiedniego przycisku powinno wyswietlic nam okreslone elementy
+
+## 
+Zadanie 1
+stworz przycisk do pobierania danych
+napisz funkcje za pomoca metodych fetch do pobierania listy postów
+lista uzytkownikow powinna wyswietlic sie w konsoli po wcisnieciu przycisku
+aby to sie wykonalo musimy dodac event listener do przycisku na event click
+
+Zadanie 2
+stworz formularz z input o typie number do wybrania id posta z zakresu 1-100
+stworz funkcje do pobierania pojedynczego posta
+przypisz do formularza utworzona funkcje
+po wcisnieciu przycisku submit powinno nam wyswietlic posta w konsoli
+
+Zadanie 3
+stworz 3 przyciski "Strona 1", "strona 2", "strona 3"
+stworz 1 funkcje z przyjmowanym parametrem "page", gdzie limit jest ustalony na sztywno do zmiennej ITEM_LIMIT
+przypisz eventy do przyciskow z html
+kazdy z tych przyciskow okresla odpowiednio elementy 1-10, 11-20, 21-30
+po wcisnieciu odpowiedniego przycisku powinno wyswietlic nam okreslone elementy
+
+zadanie 4
+stworz formularz ktory bedzie aktualizowal tytul posta
+formularz bedzie zawieral 3 inputy (okresla id, name) oraz przycisk
+input od id powinien byc sprawdzany (min=1, max=100)
+napisz funkcje ktora pobiera dane z formularza oraz aktualizuje wybranego posta
+przypisz funkcje jako event listener do formularza
+
+Zadanie 5
+stworz formularz do utworzenia nowego posta
+stworz funkcje ktora bedzie pobierac pola z formularza i tworzyc na ich bazie nowego posta w bazie
+po utworzeniu dajmy alert dla posta o nowym produkcie
+pamietamy o sprawdzeniu czy dane nie sa puste
+dodajemy event listener do formularza z referencja funkcji
+
+
+Projekt podsumowujący:
+- Strona firmy spożywczej
+Celem tego zadania jest zaprojektowanie i stworzenie strony internetowej dla nowo powstającej firmy spożywczej
+Wymagane Podstrony:
+
+1. Header
+Przyciski nawigacyjne lub menu do innych podstron.
+
+2. Strona Główna (Home):
+Powinna zawierać przyciągające uwagę zdjęcia lub slajdy prezentujące różnorodność produktów firmy.
+Krótki opis firmy i jej misji.
+
+3. Produkty (Products):
+Katalog produktów (pobierana lista z bazy).
+kazdy produkt posiada przycisk aby wyswietlic szczegóły.
+Możliwość filtrowania produktów według nazwy.
+
+4. Kontakt (Contact):
+Formularz kontaktowy dla szybkich zapytań (obsługa za pomoca JS wyswietla alert z danymi formularza)
+Dane kontaktowe: adres firmy, numer telefonu, adres e-mail.
+
+5. O Nas (About Us):
+Historia firmy, jej wartości i filozofia działania.
+Lista personelu (z bazy) oraz możliwowść rozwiniecia szczegołów o pracowniku
+krótkie biografie kluczowych członków.
+Informacje o certyfikatach jakości, nagrodach, lub innych osiągnięciach.
+
+6. Footer:
+linki do privacy policy oraz regulaminu
+logo/nazwa firmy
+
+Dodatkowe Wymogi:
+Responsywność: Strona musi być przystosowana do wyświetlania na różnych urządzeniach (komputery stacjonarne, laptopy, tablety, smartfony).-
