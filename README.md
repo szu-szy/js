@@ -147,6 +147,7 @@ Powinna zawierać przyciągające uwagę zdjęcia lub slajdy prezentujące róż
 Krótki opis firmy i jej misji.
 
 3. Produkty (Products):
+Formularz nowego produktu (zwijany za pomoca styli css)
 Katalog produktów (pobierana lista z bazy).
 kazdy produkt posiada przycisk aby wyswietlic szczegóły.
 Możliwość filtrowania produktów według nazwy.
