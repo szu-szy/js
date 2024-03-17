@@ -390,3 +390,37 @@ const fetchPosts = (event) => {
 };
 
 fetchPostForm.addEventListener("submit", fetchPosts);
+
+// Zadanie 3
+// stworz 3 przyciski "Strona 1", "strona 2", "strona 3"
+// stworz 1 funkcje z przyjmowanym parametrem "page", gdzie limit jest ustalony na sztywno do zmiennej ITEM_LIMIT
+// przypisz eventy do przyciskow z html
+// kazdy z tych przyciskow okresla odpowiednio elementy 1-10, 11-20, 21-30
+// po wcisnieciu odpowiedniego przycisku powinno wyswietlic nam okreslone elementy
+
+const postPageOneBtn = document.querySelector("#post-page-1-btn");
+const postPageTwoBtn = document.querySelector("#post-page-2-btn");
+const postPageThreeBtn = document.querySelector("#post-page-3-btn");
+
+const btnList = [postPageOneBtn, postPageTwoBtn, postPageThreeBtn];
+
+const ITEM_LIMIT = 10;
+
+const fetchPagePosts = (page) => {
+  const postURL = `https://dummyjson.com/posts?limit=10&skip=${
+    ITEM_LIMIT * (page - 1)
+  }`;
+
+  fetch(postURL)
+    .then((response) => {
+      if (!response.ok) throw new Error("Cannot fetch limit posts");
+
+      return response.json();
+    })
+    .then((responseJSON) => console.log(responseJSON))
+    .catch((error) => console.log(error));
+};
+
+btnList.forEach((btn, i) =>
+  btn.addEventListener("click", () => fetchPagePosts(i + 1))
+);
