@@ -342,3 +342,25 @@ const createUser = async (event) => {
 };
 
 newUserForm.addEventListener("submit", createUser);
+
+// Promisy
+
+const fetchThenUsers = () => {
+  fetch("https://dummyjson.com/users")
+    // czekamy az fetch sie wykona, nastepnie then
+    .then((response) => {
+      if (!response.ok) throw new Error("cannot fetch users");
+
+      return response.json();
+    })
+    // czekamy az response.json sie wykona, nastepnie then
+    .then((responseJSON) => {
+      console.log(responseJSON);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+console.log("tutaj");
+fetchThenUsers();
