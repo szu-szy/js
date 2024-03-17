@@ -364,3 +364,29 @@ const fetchThenUsers = () => {
 
 console.log("tutaj");
 fetchThenUsers();
+
+// Zadanie 2
+// stworz formularz z input o typie number do wybrania id posta z zakresu 1-100
+// stworz funkcje do pobierania pojedynczego posta
+// przypisz do formularza utworzona funkcje
+// po wcisnieciu przycisku submit powinno nam wyswietlic posta w konsoli
+
+const fetchPostForm = document.querySelector("#fetch-post-form");
+const postIdInput = document.querySelector("#fetch-post-id");
+
+const fetchPosts = (event) => {
+  event.preventDefault();
+
+  const postID = postIdInput.value;
+
+  fetch(`https://dummyjson.com/posts/${postID}`)
+    .then((response) => {
+      if (!response.ok) throw new Error("Cannot fetch post");
+
+      return response.json();
+    })
+    .then((responseJSON) => console.log(responseJSON))
+    .catch((error) => console.log(error));
+};
+
+fetchPostForm.addEventListener("submit", fetchPosts);
